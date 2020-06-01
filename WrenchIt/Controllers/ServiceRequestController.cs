@@ -50,13 +50,13 @@ namespace WrenchIt.Controllers
                
                     model = new ServiceRequestViewModel
                     {
-                        Id = item.Id,
-                        ServiceId = item.ServiceId,
+                            Id = item.Id,
+                            ServiceId = item.ServiceId,
                             Name = _context.Service.Get(item.ServiceId).Name ,
                             Customer = _context.Customer.Get(item.CustomerId).FirstName,
                             Quote = item.PriceQuotation,
                             IsCompleted = item.IsCompleted,
-                           CreatedAt = item.CreatedAt
+                            CreatedAt = item.CreatedAt
                     };
                     viewModel.Add(model);
                 

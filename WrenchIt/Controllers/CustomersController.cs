@@ -133,7 +133,7 @@ namespace WrenchIt.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult CreateServiceRequest(ServiceRequest request)
         {
-            var service = _newContext.Service.Get(request.Id);
+            var service = _newContext.Service.Get(request.ServiceId);
             if (ModelState.IsValid)
             {
                 return (RedirectToAction("ApproveServiceRequest", service));

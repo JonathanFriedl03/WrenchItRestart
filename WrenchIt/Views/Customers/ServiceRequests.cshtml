@@ -1,5 +1,4 @@
-﻿
-@model IEnumerable<WrenchIt.Models.ServiceRequestViewModel>
+﻿@model IEnumerable<WrenchIt.Models.ServiceRequestViewModel>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -23,7 +22,7 @@
             <tr>
                 <th>Service Name</th>
                 <th>Customer Name</th>
-                <th>Quote($)</th>
+                <th>Quote($)</th>                
                 <th>Status</th>
                 <th>Date</th>
             </tr>
@@ -34,7 +33,7 @@
                 <tr>
                     <td>@data.Name</td>
                     <td>@data.Customer</td>
-                    <td>@data.Quote .00</td>
+                    <td>@data.Quote.00</td>                    
 
                     @if (data.IsCompleted)
                     {
@@ -46,7 +45,7 @@
                         <td class="bg-danger">In complete</td>
                     }
                     <td>@data.CreatedAt</td>
-                   
+
 
                 </tr>
 

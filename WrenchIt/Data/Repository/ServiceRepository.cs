@@ -21,19 +21,19 @@ namespace WrenchIt.Data.RepositoryBase
 
         public IEnumerable<Service> GetAllServices()
         {
-           
+
             return _context.Services.Include(c => c.ServiceType).OrderByDescending(c => c.Id).ToList();
         }
-       public Service GetServiceWithType(int id)
+        public Service GetServiceWithType(int id)
         {
-            return _context.Services.Include(c => c.ServiceType).FirstOrDefault();
+            return _context.Services.Include(c => c.ServiceType).Where(c => c.Id == id).FirstOrDefault();
 
         }
 
 
         public void Update(Service service)
         {
-            var  objFromDb = _context.Services.FirstOrDefault(i => i.Id == service.Id);
+            var objFromDb = _context.Services.FirstOrDefault(i => i.Id == service.Id);
 
             objFromDb.Name = service.Name;
             objFromDb.Description = service.Description;

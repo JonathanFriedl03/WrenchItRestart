@@ -48,15 +48,15 @@ namespace WrenchIt.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "621b2c8b-580c-44b6-95f1-851a84c38a53",
-                            ConcurrencyStamp = "a1cb6cfa-84a3-4b9c-98c3-a831d2cec5e9",
+                            Id = "31f001c9-d754-4d97-a091-5cf2719da5d1",
+                            ConcurrencyStamp = "0d4f2cb0-bdcc-4a4d-aa4d-520c304ca582",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
                         },
                         new
                         {
-                            Id = "7c0bdec6-c87c-4c09-9552-c5730abcfcb6",
-                            ConcurrencyStamp = "2d14bade-cdf1-4947-89c2-03f3d52dcc0a",
+                            Id = "7fb4bcbf-3913-4782-b1e6-4a0db10c079e",
+                            ConcurrencyStamp = "c54855b4-e4aa-4233-aa84-7eeac817137b",
                             Name = "Employee",
                             NormalizedName = "EMPLOYEE"
                         });
