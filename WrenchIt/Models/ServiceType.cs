@@ -12,6 +12,7 @@ namespace WrenchIt.Models
         [Required]
         public string Name { get; set; }
         [Required]
+        [Display(Name = "Hourly Rate")]
         public double Rate { get; set; }
         public string Description { get; set; }
         public Category Category { get; set; }
