@@ -24,6 +24,7 @@
                 <th>Customer Name</th>
                 <th>Quote($)</th>
                 <th>Status</th>                
+                <th>Customers Cars</th>                
                 <th>Date</th>
                 <th>Action</th>
             </tr>
@@ -31,29 +32,31 @@
         <tbody>
             @foreach (var data in Model)
             {
-                <tr>
-                    <td>@data.Name</td>
-                    <td>@data.Customer</td>
-                    <td>@data.Quote.00</td>
+            <tr>
+                <td>@data.Name</td>
+                <td>@data.Customer</td>
+                <td>@data.Quote.00</td>
 
-                    @if (data.IsCompleted)
-                    {
-                        <td class="bg-success">Completed</td>
-                    }
-                    else
-                    {
-                        <td class="bg-danger">In complete</td>
-                    }                                        
-                    <td>@data.CreatedAt.ToLongDateString()</td>
-                    <td>
+                @if (data.IsCompleted)
+                {
+                    <td class="bg-success">Completed</td>
+                }
+                else
+                {
+                    <td class="bg-danger">In complete</td>
+                }
 
-                        <div class="text-center">
-                            <a href="/ServiceRequest/Edit/@data.Id" class='btn btn-success text-white' style='cursor:pointer; width:100px;'>
-                                <i class='far fa-edit'></i> Mark as Completed
-                            </a>
-                        </div>
-                    </td>
-                </tr>
+                <td>@data.Car</td>
+                <td>@data.CreatedAt.ToLongDateString()</td>
+                <td>
+
+                    <div class="text-center">
+                        <a href="/ServiceRequest/Edit/@data.Id" class='btn btn-success text-white' style='cursor:pointer; width:100px;'>
+                            <i class='far fa-edit'></i> Mark as Completed
+                        </a>
+                    </div>
+                </td>
+            </tr>
             }
         </tbody>
     </table>
